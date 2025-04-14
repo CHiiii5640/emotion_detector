@@ -13,20 +13,32 @@ emotion_detector/
 ├── train_emotion_classifier.py # 訓練模型
 ├── recognize_emotion.py        # 語音情緒偵測
 ├── extract_egemaps_features.py # 擷取 eGeMAPS 特徵
+├── record_save.py              # 錄音並儲存為資料集
+├── current_emotion.json        # Unity 讀取的結果（偵測情緒）
 └── .gitignore
 ---
 
 ## 🔧 使用流程
 
-1. 錄音並自行分類至 `data/` 資料夾下（如：`happy/`、`sad/`、`angry/`）
-2. 執行 `extract_egemaps_features.py` 擷取語音特徵
-3. 執行 `train_emotion_classifier.py` 訓練模型
-4. 執行 `recognize_emotion.py` 即時偵測使用者語音情緒
-5. Unity 可透過 `current_emotion.json` 讀取偵測結果（可用於控制動畫、變色等）
+1. 執行 `record_save.py` 錄製語音並自行分類到 `data/happy/`, `data/sad/`, `data/angry/` 等資料夾
+2. 執行 `extract_egemaps_features.py` 擷取語音特徵（輸出 `egemaps_features.csv`）
+3. 執行 `train_emotion_classifier.py` 訓練情緒模型（產出 `emotion_model.joblib`）
+4. 執行 `recognize_emotion.py` 透過麥克風即時偵測情緒，並儲存為 `current_emotion.json`
+5. 在 Unity 內讀取 `current_emotion.json`，控制畫面顏色、動畫或角色行為
 
 ---
 
-## 📦 依賴套件
+## 🧠 支援的情緒
+
+目前模型支援分類以下情緒（視你的語音資料分類而定）：
+
+- happy
+- sad
+- angry
+
+---
+
+## 📦 安裝依賴套件
 
 ```bash
 pip install sounddevice soundfile opensmile scikit-learn joblib pandas
