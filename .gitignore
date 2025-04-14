@@ -1,0 +1,30 @@
+# Python 編譯檔案
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 機器學習模型 / 結果
+*.joblib
+*.pkl
+*.ckpt
+*.h5
+
+# 音訊資料與中介資料
+*.wav
+*.mp3
+*.json
+recorded.wav
+
+# 資料夾
+data/
+output/
+
+# Jupyter Notebook 暫存
+.ipynb_checkpoints/
+
+# VSCode 設定
+.vscode/
+
+# macOS 系統自動產生的隱藏檔
+.DS_Store
