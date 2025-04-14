@@ -1,20 +1,22 @@
 # 🎧 Emotion Detector
 
-這是一個簡單的情緒語音偵測器，支援使用麥克風錄音，並透過 eGeMAPS 聲學特徵 + 機器學習模型來判斷使用者的情緒狀態。
+這是一個簡單的情緒語音偵測器，支援使用麥克風錄音，並透過 **eGeMAPS 聲學特徵** + **機器學習模型** 來判斷使用者的情緒狀態，並可與 Unity 整合進行互動！
 
 ---
 
 ## 📁 專案結構
+
+```bash
 emotion_detector/
-├── data/                        # 儲存訓練語音資料（happy/sad/angry/…）
-├── recorded.wav                 # 即時錄音檔案
-├── egemaps_features.csv        # 特徵擷取後的資料
-├── emotion_model.joblib        # 訓練好的情緒分類模型
-├── train_emotion_classifier.py # 訓練模型
-├── recognize_emotion.py        # 語音情緒偵測
-├── extract_egemaps_features.py # 擷取 eGeMAPS 特徵
-├── record_save.py              # 錄音並儲存為資料集
-├── current_emotion.json        # Unity 讀取的結果（偵測情緒）
+├── data/                        # 儲存訓練語音資料（如 happy/sad/angry）
+├── recorded.wav                 # 即時錄音結果
+├── egemaps_features.csv        # 擷取後的聲音特徵
+├── emotion_model.joblib        # 訓練完成的模型
+├── current_emotion.json        # 偵測結果供 Unity 讀取
+├── train_emotion_classifier.py # 訓練模型程式
+├── recognize_emotion.py        # 錄音 + 預測情緒
+├── extract_egemaps_features.py # 特徵擷取程式
+├── record_save.py              # 錄音並分類儲存
 └── .gitignore
 ---
 
