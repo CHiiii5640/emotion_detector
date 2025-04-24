@@ -10,15 +10,7 @@ __pycache__/
 *.ckpt
 *.h5
 
-# 音訊資料與中介資料
-*.wav
-*.mp3
-*.json
-recorded.wav
 
-# 資料夾
-data/
-output/
 
 # Jupyter Notebook 暫存
 .ipynb_checkpoints/
