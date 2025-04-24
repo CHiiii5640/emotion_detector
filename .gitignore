@@ -10,8 +10,6 @@ __pycache__/
 *.ckpt
 *.h5
 
-
-
 # Jupyter Notebook 暫存
 .ipynb_checkpoints/
 
